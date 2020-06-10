@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<title>Адресная книга</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<script src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-cachebuster/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.ui.layout, sap.ui.commons, sap.ui.table, sap.ui.ux3 "
+				data-sap-ui-theme="sap_bluecrystal"
+		        data-sap-ui-appCacheBuster="./">
+		</script>
+		
+		<!-- <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-cachebuster/sap-ui-core.js"
+			data-sap-ui-appCachebuster="./"
+			data-sap-ui-resourceroots='{ "ZADDRESS_BOOK" : "./" }'
+			id="sap-ui-bootstrap" data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal">
+		</script> -->
+		
+		<script type="text/javascript" src="jquery-latest.js"></script>
+		<script type="text/javascript" src="jquery.tablesorter.js"></script> 
+
+<!-- 		<link rel="stylesheet" type="text/css" href="css/style.css"> -->
+	
+		<style>
+		tbody tr:nth-child(odd) {
+           background-color: #E1F3F9!important;
+        }
+        /*#idTable-listUl{
+        	  display: block;
+			  overflow: auto;
+			  max-width: 100%;
+        }*/
+        	
+		</style>
+		
+		<script>
+				sap.ui.localResources("addressBook");
+				var app = new sap.m.App({initialPage:"idAddressBook"});
+				var page = sap.ui.view({id:"idAddressBook", viewName:"addressBook.ViewAB", type:sap.ui.core.mvc.ViewType.JS});
+				app.addPage(page);
+				app.placeAt("content");
+		</script>
+
+	</head>
+
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+		<!-- <script>
+		$('#content').bind("DOMSubtreeModified",function(){
+			document.getElementById("idTable-tblHeader").onclick = function() {
+				$("#idTable-listUl").tablesorter();
+			  };
+			});
+		</script> -->
+		<!-- <script>
+		$('#content').bind("DOMSubtreeModified",function(){
+			document.getElementById("idTable-tblHeader").onclick = function() {
+				$("#idTable-listUl").tablesorter();
+			  };
+			});
+		</script> -->
+	
+				
+			 
+		
+		
+	
+	</body>
+	
+</html>
+    
